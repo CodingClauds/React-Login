@@ -23,6 +23,7 @@ function LoginForm({ Login, error }) {
               type="text"
               name="name"
               id="name"
+              placeholder="John Wick"
               onChange={(e) => setDetails({ ...details, name: e.target.value })}
               value={details.name}
             />
@@ -34,7 +35,7 @@ function LoginForm({ Login, error }) {
               type="email"
               name="email"
               id="email"
-              placeholder="login-here@gmail.com"
+              placeholder="johnwick@gmail.com"
               onChange={(e) =>
                 setDetails({ ...details, email: e.target.value })
               }
@@ -44,7 +45,15 @@ function LoginForm({ Login, error }) {
 
           <div className="form-group">
             <label htmlFor="password">Password:</label>
-            <input type="text" name="password" id="password" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              onChange={(e) =>
+                setDetails({ ...details, password: e.target.value })
+              }
+              value={details.password}
+            />
           </div>
 
           <input type="submit" value="LOGIN" />
