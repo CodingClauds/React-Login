@@ -7,9 +7,6 @@ function App() {
     password: "admin123",
   };
 
-  console.log(adminUser);
-
-  // Initalize user state and error handling if user is not signed up.
   const [user, setUser] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
 
@@ -21,7 +18,21 @@ function App() {
     console.log("Logout");
   };
 
-  return <div className="App"></div>;
+  return (
+    // If the user has input details, have a welcome form, if the user has not just display the plain loginForm
+    <div className="App">
+      {user.email !== "" ? (
+        <div className="welcome">
+          <h2>
+            Welcome, <span>{user.name}</span>
+          </h2>
+          <button>Logout</button>
+        </div>
+      ) : (
+        <LoginForm Login={Login} error={error} />
+      )}
+    </div>
+  );
 }
 
 export default App;
