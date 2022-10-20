@@ -35,14 +35,31 @@ function App() {
   };
 
   return (
-    // If user inputs correct data, portal to welcome page.
+    // Welcome Page once correct login has been implemented.
     <div className="App">
       {user.email !== "" ? (
         <div className="welcome">
-          <h2>
-            Welcome, <span>{user.name}</span>
+          <h2 className="welcome__title">
+            Welcome, <span className="welcome__user">{user.name}</span>
           </h2>
-          <button onClick={Logout}>Logout</button>
+          <div className="welcome__container">
+            <p className="welcome__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+              quis perferendis quisquam sit suscipit similique, corporis
+              repudiandae in, libero harum corrupti est facere doloribus.
+              Eveniet corporis nemo quis modi nobis!
+            </p>
+
+            <p className="welcome__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+              quis perferendis quisquam sit suscipit similique, corporis
+              repudiandae in, libero harum corrupti est facere doloribus.
+              Eveniet corporis nemo quis modi nobis!
+            </p>
+          </div>
+          <button className="welcome__button" onClick={Logout}>
+            Logout
+          </button>
         </div>
       ) : (
         // Else default render, when user is @ sign in page.
