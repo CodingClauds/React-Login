@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.scss";
 import LoginForm from "./components/Login/LoginForm";
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         email: details.email,
       });
     } else {
-      setError("Details do not match! Please confirm login");
+      setError("Please confirm login, details do not match.");
       console.log("Whommpwhompppwhompp");
     }
   };
@@ -34,7 +35,7 @@ function App() {
   };
 
   return (
-    // If the user has input details, have a welcome form, if the user has not just display the plain loginForm
+    // If user inputs correct data, portal to welcome page.
     <div className="App">
       {user.email !== "" ? (
         <div className="welcome">
@@ -44,6 +45,7 @@ function App() {
           <button onClick={Logout}>Logout</button>
         </div>
       ) : (
+        // Else default render, when user is @ sign in page.
         <LoginForm Login={Login} error={error} />
       )}
     </div>
