@@ -13,6 +13,7 @@ function LoginForm({ Login, error }) {
   return (
     <>
       <form onSubmit={submitHandler}>
+        {error !== "" ? <div className="error">{error}</div> : ""}
         {/* form-container */}
         <div className="form-inner">
           <h2>Login</h2>

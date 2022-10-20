@@ -23,7 +23,8 @@ function App() {
         email: details.email,
       });
     } else {
-      console.log("Details do not match! Please confirm information");
+      setError("Details do not match! Please confirm login");
+      console.log("Whommpwhompppwhompp");
     }
   };
 
