@@ -13,11 +13,12 @@ function LoginForm({ Login, error }) {
   return (
     <>
       <form onSubmit={submitHandler}>
-        {error !== "" ? <div className="error">{error}</div> : ""}
-        {/* form-container */}
         <div className="form-inner">
           <h2>Login</h2>
-          {/* form-content */}
+
+          {/* Error handle display */}
+          {error !== "" ? <div className="error">{error}</div> : ""}
+
           <div className="form-group">
             <label htmlFor="name">Name:</label>
             <input
@@ -57,7 +58,7 @@ function LoginForm({ Login, error }) {
             />
           </div>
 
-          <input type="submit" value="LOGIN" />
+          <input className="login-btn" type="submit" value="LOGIN" />
         </div>
       </form>
     </>
