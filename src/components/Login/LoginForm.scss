@@ -20,8 +20,15 @@ form .form-inner {
   position: relative;
   display: block;
   background-color: white;
-  padding: 4rem;
   z-index: 2;
+  padding: 2rem;
+
+  @media screen and (min-width: 375px) {
+    padding: 3rem;
+  }
+  @media screen and (min-width: 425px) {
+    padding: 4rem;
+  }
 }
 
 form .form-inner h2 {
@@ -34,8 +41,14 @@ form .form-inner h2 {
 
 form .form-inner .form-group {
   display: block;
-  width: 18.75rem;
   margin-bottom: 0.9375rem;
+
+  @media screen and (min-width: 375px) {
+    width: 15rem;
+  }
+  @media screen and (min-width: 525px) {
+    width: 18.75rem;
+  }
 }
 
 .form-inner .form-group label {
@@ -73,6 +86,7 @@ form .form-inner input[type="submit"],
     #ffce00 50%,
     #fe4880
   );
+  width: 100%;
   background-size: 200%;
   background-position: 0%;
   transition: 0.5s;
@@ -117,4 +131,27 @@ form .form-inner input[type="submit"]:hover,
   color: red;
   padding-bottom: 2rem;
   font-size: 14px;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  font-size: 12.5px;
+
+  &__label {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input {
+    appearance: auto;
+    margin-right: 0.5rem;
+  }
+}
+
+.forget {
+  &__password {
+    color: steelblue;
+  }
 }
