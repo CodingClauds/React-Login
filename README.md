@@ -1,6 +1,6 @@
 # Console.log(in)
 
-I focused on building out a login component, that emulates a sign in with error handling and a admin login that will bring you to a new page. This is currently done in a naive approach, but the point still stands. It's meant to illustrate how a user would go from a sign in page to a new page with the right credentials.
+I focused on building out a login component, that emulates a sign in with error handling and admin login that will bring you to a new page. This is currently done in a naive approach, but the point still stands. It's meant to illustrate how a user would go from a sign in page to a new page with the right credentials.
 
 
 # Getting Started with Create React App
